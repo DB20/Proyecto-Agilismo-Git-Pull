@@ -97,7 +97,8 @@ class CarreraTestCase(unittest.TestCase):
         carreras = self.eporra.dar_lista_carreras()
         self.assertEqual(len(carreras),2)
 
-    
+    def test_eliminar_carrera (self):
+        return False
     
     
         

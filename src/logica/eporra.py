@@ -60,3 +60,14 @@ class Eporra():
         carreras = [elem.__dict__ for elem in session.query(Carrera).all()]
         return carreras
 
+    def eliminar_carrera(self, carrera_id):
+        try:
+            carrera = session.query(Carrera).filter(Carrera.id == carrera_id).first()
+            if carrera is not None:
+                session.delete(carrera)
+                session.commit()
+                return True
+            else:
+                return False
+        except:
+            return False
